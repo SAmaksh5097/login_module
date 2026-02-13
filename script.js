@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const port = 3005
-const mongoose = require('mongoose')
 const {connectDB} = require('./connection')
 const UserRouter = require('./routes/user')
 
