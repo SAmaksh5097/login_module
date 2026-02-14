@@ -31,8 +31,6 @@ const Delete = () => {
         
     }
 
-
-
   return (
     <div className='w-fit p-4 flex flex-col gap-4 bg-neutral-300 text-black font-bold rounded-md shadow-md shadow-gray-100 '>
         <h1>Delete Existing User</h1>
