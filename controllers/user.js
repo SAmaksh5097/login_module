@@ -13,6 +13,7 @@ async function handleLogin(req,res){
 async function handleAddUser(req,res) {
     const data = req.body;
     if(!data.name || !data.username || !data.password){
+        
         return res.status(400).json({msg:"Empty fields 😒"})
     }
     const user = await Credential.find({username:data.username})
@@ -21,6 +22,7 @@ async function handleAddUser(req,res) {
     }
     await Credential.create({name:data.name, username:data.username, password:data.password})
 
+    
     res.json({msg:"User added successfully 👍!!!"})
 }
 
@@ -45,6 +47,6 @@ async function handleDelete(req,res) {
     if(!data){
         return res.status(401).json({msg:"Details invalid 🤬"})
     }
-    res.json({msg:"user deleted 🙋‍♂️"})
+    res.status(200).json({msg:"user deleted 🙋‍♂️"})
 }
 module.exports = {handleLogin, handleAddUser, handlePasswordEdit, handleDelete}
