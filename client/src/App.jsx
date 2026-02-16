@@ -6,11 +6,12 @@ import Update from './Update'
 import { Route, Routes, Link } from 'react-router-dom'
 import Delete from './Delete'
 import './App.css'
+import Header from './Header'
 const App = () => {
   return (
-    <div className='bg-black h-screen text-white flex flex-col items-center justify-center'>
+    <div className='bg-black h-screen text-white w-full '>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Header/>}/>
           <Route path='/login' element={<SignIn/>}/>
           <Route path='/signup' element={<Create/>}/>
           <Route path='/login/update' element={<Update/>}/>
